@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Practical Application Activity</title>
+</head>
+<body>
+
+  <!-- Main Title -->
+  <h1 id="main-heading">HTML Practical Application Activity</h1>
+
+  <!-- Navigation for Same-Page Anchor Link -->
+  <p><a href="#footer-section">Jump to Footer (Anchor Link Test)</a></p>
+
+  <hr>
+
+  <!-- == SECTION 1: IMAGES == -->
+  <section id="images-section">
+    <h2>Images</h2>
+    
+    <!-- Image 1 with custom width -->
+    <img src="images/cat.png" alt="A cute cat smiling widely" width="300">
+
+    <!-- Image 2 standard -->
+    <img src="images/dog.png" alt="Smiling dog with flowers in mouth" width="300">
+
+    <!-- Image 3 wrapped in figure and figcaption -->
+    <figure id="hero-figure">
+      <img src="images/strawberries.png" alt="Yummy strawberries" width="400">
+      <figcaption>Figure 1: Yummy fresh red strawberries.</figcaption>
+    </figure>
+  </section>
+
+  <hr>
+
+  <!-- == SECTION 2: HYPERLINKS == -->
+  <section id="hyperlinks-section">
+    <h2>Hyperlinks</h2>
+    <ul>
+      <!-- 1. Internal Link -->
+      <li><a href="activity.html">Internal Link to standard activity page</a></li>
+      
+      <!-- 2. External Link (Opens in new tab) -->
+      <li><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">External Link: Youtube</a></li>
+      
+      <!-- 3. Email Link -->
+      <li><a href="mailto:student@example.com">Send an Email to Student</a></li>
+      
+      <!-- 4. Same-page Anchor Link -->
+      <li><a href="#images-section">Jump back to Images Section</a></li>
+    </ul>
+  </section>
+
+  <hr>
+
+ <!-- == SECTION 3: MULTIMEDIA == -->
+<section id="multimedia-section">
+  <h2>Multimedia</h2>
+
+  <h3>Audio Player</h3>
+  <audio controls>
+    <source src="media/audio.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <h3>Video Player</h3>
+  <video controls width="400">
+    <source src="media/video.mp4" type="video/mp4">
+    Your browser does not support the video element.
+  </video>
+</section>
+
+  <hr>
+
+  <!-- == SECTION 4: USEFUL TAGS == -->
+<section id="useful-tags-section">
+  <h2>Useful Tags</h2>
+
+    <!-- Tag 1: <abbr> tag used to expand technical acronyms for screen readers -->
+    <p>We are building this project using <abbr title="HyperText Markup Language">HTML</abbr>.</p>
+
+    <!-- Tag 2: <code> tag used to present inline technical code snippets clearly -->
+    <p>To define a main division in your document, use the <code>&lt;div&gt;</code> element.</p>
+
+     <!-- Tag 3: <mark> tag used to present inline technical code snippets clearly -->
+    <p>Make sure to submit activity before <mark>September 24, 2026</mark>.</p>
+  </section>
+
+  <hr>
+
+  <!-- == SECTION 5: HTML DOM == -->
+  <section id="dom-section">
+    <h2>HTML DOM</h2>
+    <p>This section fulfills the DOM ID requirement. The elements with IDs in this document are <code>#main-heading</code>, <code>#hero-figure</code>, and <code>#footer-section</code>.</p>
+  </section>
+
+  <footer id="footer-section">
+    <p>&copy; 2026 Atillo Activity 2. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
