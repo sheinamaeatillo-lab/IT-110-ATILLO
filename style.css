@@ -1,0 +1,182 @@
+/*------------- CSS RESET & FUNDAMENTALS ----------------------*/
+/* Universal reset for margins, paddings, and border-box layout*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base styles for body and typography */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f6;
+    color: #333333;            
+    line-height: 1.6;
+}
+
+/* Grouping selector for main headings */
+h1, h2 {
+    font-weight: 700;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem; /* rem unit used */
+    color: rgb(0, 0, 0); 
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #000000;
+}
+
+/*--------------- LAYOUT & COMPONENTS (.card & Sections) ---------------*/
+header, footer {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+header {
+    margin-bottom: 30px;
+}
+
+footer {
+    margin-top: 40px;
+    font-size: 0.9rem;
+    color: #7f8c8d;
+}
+
+/* Navigation Links Style */
+nav {
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+nav a {
+    display: inline-block;
+    padding: 8px 16px;
+    margin: 0 5px;
+    background-color: #ecf0f1;
+    color: #2980b9;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+/* Pseudo-class: Hover effect for navigation links */
+nav a:hover {
+    background-color: #5a0536;
+    color: white;
+}
+
+/* Card Styling */
+.card {
+    width: 500px;                      /* Fixed width in px */
+    padding: 25px;                     /* Internal spacing */
+    border: 2px solid #bdc3c7;       /* Width, style, and color in one line */
+    border-radius: 12px;               /* Rounded corners */
+    background-color: white;
+    margin: 0 auto 25px auto;          /* Centered horizontally using 0 auto, spaced vertically */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* ID Selector: Make #about stand out with a unique border color */
+#about {
+    border-color: hsl(327, 80%, 52%);
+    position: relative;    /* Positioning requirement for absolute badge */
+}
+
+/* Pseudo-element: Absolute badge placed in the top-right corner of #about */
+#about::after {
+    content: "Featured";
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: hsl(338, 88%, 33%);
+    color: rgb(238, 225, 234);
+    font-size: 0.75rem;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+/*--------- COMBINATORS, PSEUDO-ELEMENTS & DISPLAY ----------*/
+/* Descendant Selector (.card p) and Class Selector (.intro) */
+.card p {
+    font-size: 1rem;
+    margin-bottom: 12px;
+}
+
+.intro {
+    font-weight: bold;
+    color: #a7024f;
+}
+
+/* Pseudo-element: Style the first letter of the intro paragraph */
+.intro::first-letter {
+    font-size: 1.5rem;
+    color: hsl(337, 80%, 52%);
+}
+
+/* Skills List Layout using Flexbox */
+.skills-list {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    list-style: none;
+    margin-top: 10px;
+}
+
+/* Child Selector (.skills-list > li) styled like small tags */
+.skills-list > li {
+    background-color: #eebadc;
+    color: #8b0553;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border: 1px solid #000000;
+}
+
+/* Visibility controls */
+.hide-none {
+    display: none;      /* Element is completely removed from document flow */
+}
+
+.hide-visibility {
+    visibility: hidden; /* Element is hidden, but its allocated box/space remains */
+}
+
+/* Short explanation of difference between display: none and visibility: hidden */
+/* 
+   - display: none removes the element entirely from the layout flow (zero space).
+   - visibility: hidden hides the element visually, but leaves an empty blank gap.
+*/
+
+/* Scroll Box Setup */
+.scroll-box {
+    height: 120px;       /* Fixed height */
+    overflow: auto;      /* Enables the scrollbar if content exceeds height */
+}
+
+
+
+
+/*------- REFLECTION ANSWERS ---------*/
+/* Reflection Question 1:
+   One of my conflicting rules won because of higher specificity (combining classes and 
+   element types) and source order rules, where rules defined with more specific selectors 
+   override broader general selectors.
+
+   Reflection Question 2:
+   If box-sizing were content-box, the width would be 554px. 
+   Calculation: 500px (width) + 50px (padding) + 4px (borders) = 554px total width.
+
+   Reflection Question 3:
+   I would choose visibility: hidden when I want to hide an element temporarily or keep 
+   its layout footprint intact so that surrounding elements do not shift or jump position 
+   on the screen.*/
